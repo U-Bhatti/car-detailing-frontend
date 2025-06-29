@@ -1,0 +1,8 @@
+.align {
+  display:flex;
+  flex-direction: column;
+}
+
+.person-or-company {
+  display: flex;
+}

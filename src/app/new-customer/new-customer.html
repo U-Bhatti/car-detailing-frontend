@@ -1,0 +1,62 @@
+<div class="align">
+
+  <!-- Existing customer sees the following inputs -->
+
+
+  <!--  New customer sees the following inputs  -->
+
+  <!--    STEP1: pick a date -->
+  <app-date-picker></app-date-picker>
+
+  <!--    STEP2: Fill in all the customer details -->
+  <!--    TODO: When "professional" is selected you need to remove the
+            input fields "name" and "first-name" and show the fields "company name" -->
+  <div class="person-or-company">
+    <div>
+      <input type="radio" id="private" name="type-of-customer" value="private">
+      <label for="private">private</label><br>
+    </div>
+    <div>
+      <input type="radio" id="professional" name="type-of-customer" value="professional">
+      <label for="professional">professional</label><br>
+    </div>
+  </div>
+  <!--    <div>-->
+  <label for="name">Name</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    required
+    placeholder="Name"
+    minlength="4"
+    maxlength="8"
+    size="10"/>
+  <!--    </div>-->
+  <!--    <div>-->
+  <label for="First name">First name</label>
+  <input
+    type="text"
+    id="First name"
+    name="name"
+    required
+    placeholder="Name"
+    minlength="4"
+    maxlength="8"
+    size="10"/>
+
+  <label for="Phone">Phone</label>
+  <input
+    type="tel"
+    id="Phone"
+    name="Phone"
+    required
+    placeholder="Phone"
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}545"
+  />
+
+  <label for="Address">Address</label>
+  <textarea id="Address" name="Address" rows="5" cols="33"></textarea>
+  <!--    </div>-->
+  <button (click)="registerCustomer()">Register Customer</button>
+</div>
